@@ -3,77 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEBSITE SHUTDOWN</title>
+    <title>Babyblues Area</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;900&display=swap');
 
         body {
-            background: #000;
-            color: #ff0000;
-            font-family: 'Courier New', monospace;
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-            left: 0;
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+            background-color: #0a001f;
+            color: #00ffff;
+            background-image: url('https://4kwallpapers.com/images/wallpapers/neon-city-futuristic-city-cyber-city-cyberpunk-cityscape-5k-3840x2160-8801.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards;
+            overflow-x: hidden;
         }
 
-        .shutdown-message {
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.7);
             text-align: center;
-            padding: 2rem;
-            animation: glitch 2s infinite;
+            padding: 100px 20px;
+            border-bottom: 3px solid #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
         }
 
-        .shutdown-message h1 {
-            font-size: 4rem;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            margin-bottom: 2rem;
-            text-shadow: 0 0 20px #ff0000;
+        header h1 {
+            font-size: 72px;
+            margin: 0;
+            color: #ff00ff;
+            text-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
         }
 
-        .shutdown-message .byline {
-            font-size: 2rem;
-            color: #00ff00;
-            text-shadow: 0 0 10px #00ff00;
-            margin-top: 1rem;
+        header p {
+            font-size: 24px;
+            color: #00ffff;
+            text-shadow: 0 0 15px #00ffff;
         }
 
-        @keyframes glitch {
-            0% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(-2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(2px, -2px); }
-            100% { transform: translate(0); }
+        nav {
+            background: rgba(10, 0, 31, 0.8);
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 0 20px #ff00ff;
         }
 
-        @media (max-width: 768px) {
-            .shutdown-message h1 {
-                font-size: 2.5rem;
-            }
-            
-            .shutdown-message .byline {
-                font-size: 1.5rem;
-            }
+        nav a {
+            color: #00ffff;
+            margin: 0 30px;
+            text-decoration: none;
+            font-size: 20px;
+            text-shadow: 0 0 10px #00ffff;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 20px #ff00ff;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.5);
+            border: 1px solid #ff00ff;
+        }
+
+        h2 {
+            color: #ff00ff;
+            text-align: center;
+            font-size: 36px;
+            text-shadow: 0 0 15px #ff00ff;
+            border-bottom: 2px dashed #00ffff;
+            padding-bottom: 15px;
+        }
+
+        #about p {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .item {
+            background: rgba(10, 0, 31, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 15px #00ffff;
+            transition: transform 0.3s;
+        }
+
+        .item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px #ff00ff;
+        }
+
+        .item img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #ff00ff;
+            box-shadow: 0 0 20px #ff00ff;
+        }
+
+        .item strong {
+            display: block;
+            margin-top: 15px;
+            font-size: 20px;
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #00ffff;
+            margin-top: 60px;
+            border-top: 3px solid #ff00ff;
+        }
+
+        /* Header portrait */
+        #header-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #ff00ff;
+            box-shadow: 0 0 40px #ff00ff, 0 0 60px #00ffff;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="shutdown-message">
-        <h1>WEBSITE SHUTDOWN</h1>
-        <div class="byline">BY DAETRONIC_REAL :3</div>
-    </div>
+
+    <header>
+        <h1>BABYBLUE</h1>
+        <p>No life gamer, guitar player, biker</p>
+		<h5>Made by daetronic_real</h5>
+        <img id="header-img" src="https://cdn.discordapp.com/avatars/1025997923810545714/a288e8b91f0c5ccacff9586e7574857d.webp?size=100" alt="BabyBlue Portrait">
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#albums">Top Albums</a>
+        <a href="#songs">Top Songs</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm BabyBlue and I like listening to music way to much. I'm from the Wairarapa in New Zealand I like exploring places in my country and hanging out with friends. My hobbies are playing the guitar, bike riding, playing games with friends.</p>
+    </section>
+
+    <section id="albums">
+        <h2>Top Three Albums/Mixtapes</h2>
+        <div class="grid">
+            <div class="item">
+                <img src="tdb.jpg" alt="dollar">
+                <strong>1. Three Dollar Bill, Yall $ - Limp Bizkuit</strong>
+            </div>
+            <div class="item">
+                <img src="korn.jpg" alt="dihkorn">
+                <strong>2. Korn - Korn</strong>
+            </div>
+            <div class="item">
+                <img src="kea.jpg" alt="kill dih">
+                <strong>3. Kill Em All - Metallica</strong>
+            </div>
+        </div>
+    </section>
+
+    <section id="songs">
+        <h2>Top Five Songs</h2>
+        <div class="grid">
+            <div class="item">
+                <img src="tdb.jpg" alt="tdb">
+                <strong>1. Counterfeit</strong>
+            </div>
+            <div class="item">
+                <img src="tdb.jpg" alt="tdb">
+                <strong>2. Nobody Loves Me</strong>
+            </div>
+            <div class="item">
+                <img src="tdb.jpg" alt="tdb">
+                <strong>3. Clunk</strong>
+            </div>
+            <div class="item">
+                <img src="korn.jpg" alt="Blind">
+                <strong>4. Blind</strong>
+            </div>
+            <div class="item">
+                <img src="kea.jpg" alt="dih cheese">
+                <strong>5. Hit The Lights</strong>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Daemon <copy></p>
+    </footer>
+
 </body>
 </html>
+
 
 

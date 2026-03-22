@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <title>BabyBlues Moshpit</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;900&display=swap');
-
         body {
             margin: 0;
             padding: 0;
             font-family: 'Orbitron', sans-serif;
-            background-color: #0a001f;
-            color: #00ffff;
+            background-color: #000000;
+            color: #ffffff;
             background-image: url('https://cdn.discordapp.com/attachments/1242712587611799564/1485118627689791729/image.png?ex=69c0b401&is=69bf6281&hm=3cd7202f8d0feb485a6cbe767497ea2ebdefc2cf06c67cd9e6c252dd8bafee08');
             background-size: cover;
             background-attachment: fixed;
@@ -22,207 +21,178 @@
             animation: fadeIn 2s ease-in forwards;
             overflow-x: hidden;
         }
-
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-
         header {
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.75);
             text-align: center;
             padding: 100px 20px;
-            border-bottom: 3px solid #ff0918;
-            text-shadow: 0 0 10px #ff0918;
+            border-bottom: 3px solid #ff0000;
+            text-shadow: 0 0 10px #ff0000;
         }
-
         header h1 {
             font-size: 72px;
             margin: 0;
-            color: #ff0918;
-            text-shadow: 0 0 20px #ff0918, 0 0 40px #081710;
+            color: #ff0000;
+            text-shadow: 0 0 20px #ff0000, 0 0 40px #000000;
         }
-
         header p {
             font-size: 24px;
-            color: #081710;
-            text-shadow: 0 0 15px #081710;
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(255,0,0,0.6);
         }
-
         nav {
-            background: rgba(10, 0, 31, 0.8);
+            background: rgba(0, 0, 0, 0.85);
             text-align: center;
             padding: 15px;
             position: sticky;
             top: 0;
             z-index: 10;
-            box-shadow: 0 0 20px #081710;
+            box-shadow: 0 0 20px #000000;
         }
-
         nav a {
-            color: #081710;
+            color: #ffffff;
             margin: 0 30px;
             text-decoration: none;
             font-size: 20px;
-            text-shadow: 0 0 10px #081710;
+            text-shadow: 0 0 8px rgba(0,0,0,0.9);
             transition: 0.3s;
         }
-
         nav a:hover {
-            color: #ff0918;
-            text-shadow: 0 0 20px #ff0918;
+            color: #ff0000;
+            text-shadow: 0 0 20px #ff0000;
         }
-
         section {
             max-width: 900px;
             margin: 60px auto;
             padding: 30px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.7);
             border-radius: 15px;
-            box-shadow: 0 0 30px rgba(255, 0, 255, 0.5);
-            border: 1px solid #00A36C;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+            border: 1px solid #ff0000;
         }
-
         h2 {
-            color: #00A36C;
+            color: #ff0000;
             text-align: center;
             font-size: 36px;
-            text-shadow: 0 0 15px #00A36C;
-            border-bottom: 2px dashed #00A36C;
+            text-shadow: 0 0 15px #ff0000;
+            border-bottom: 2px dashed #ff0000;
             padding-bottom: 15px;
         }
-
         #about p {
             font-size: 18px;
             line-height: 1.8;
             text-align: center;
+            color: #dddddd;
         }
-
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
-
         .item {
-            background: rgba(10, 0, 31, 0.8);
+            background: rgba(20, 0, 0, 0.8);
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 0 15px #081710;
-            transition: transform 0.3s;
+            box-shadow: 0 0 15px #000000;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-
         .item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 0 30px #00A36C;
+            box-shadow: 0 0 30px #ff0000;
         }
-
         .item img {
             width: 200px;
             height: 200px;
             object-fit: cover;
             border-radius: 10px;
-            border: 3px solid #00A36C;
-            box-shadow: 0 0 20px #00A36C;
+            border: 3px solid #ff0000;
+            box-shadow: 0 0 20px rgba(255,0,0,0.5);
         }
-
         .item strong {
             display: block;
             margin-top: 15px;
             font-size: 20px;
-            color: #00A36C;
-            text-shadow: 0 0 10px #00A36C;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255,0,0,0.7);
         }
-
         footer {
             text-align: center;
             padding: 30px;
-            background: rgba(0, 0, 0, 0.8);
-            color: #00A36C;
+            background: rgba(0, 0, 0, 0.9);
+            color: #ffffff;
             margin-top: 60px;
-            border-top: 3px solid #00A36C;
+            border-top: 3px solid #ff0000;
         }
-
-        /* Header portrait */
         #header-img {
             width: 300px;
             height: 300px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid #00A36C;
-            box-shadow: 0 0 40px #00A36C, 0 0 60px #00A36C;
+            border: 5px solid #ff0000;
+            box-shadow: 0 0 40px #ff0000, 0 0 60px rgba(255,0,0,0.6);
             margin-top: 20px;
         }
     </style>
 </head>
 <body>
-
     <header>
         <h1>BABYBLUE</h1>
         <p>The moshpit corner of the internet.</p>
-		<h5>Made by daetronic_real</h5>
+        <h5>Made by daetronic_real</h5>
         <img id="header-img" src="https://cdn.discordapp.com/avatars/1025997923810545714/275775b742349ccaa02a9f9a75bc0302.webp?size=100" alt="BabyBlue Portrait">
     </header>
-
     <nav>
         <a href="#about">About Me</a>
-		<a href="#hobbies">Hobbies</a>
+        <a href="#hobbies">Hobbies</a>
         <a href="#albums">Top Albums</a>
         <a href="#songs">Top Songs</a>
     </nav>
-
     <section id="about">
         <h2>About Me</h2>
         <p>I'm BabyBlue. I'm from Wairarapa in New Zealand, always chilling out with my kiwi homies.</p>
     </section>
-	
-	<section id="hobbies">
-    <h2>Hobbies</h2>
-    <div class="grid">
-        <div class="item">
-            <strong>Listening to Music</strong>
-            <p>Always rocking out, and blasting my favorites.</p>
+    <section id="hobbies">
+        <h2>Hobbies</h2>
+        <div class="grid">
+            <div class="item">
+                <strong>Listening to Music</strong>
+                <p>Always rocking out, and blasting my favorites.</p>
+            </div>
+            <div class="item">
+                <strong>Collecting</strong>
+                <p>Band T-shirts and World War II memorabilia, and vinyls.</p>
+            </div>
+            <div class="item">
+                <strong>Guitar & Singing</strong>
+                <p>Playing guitar and singing whenever I get the chance.</p>
+            </div>
+            <div class="item">
+                <strong>Off-Road Bike Riding</strong>
+                <p>Having a good experience off-road.</p>
+            </div>
+            <div class="item">
+                <strong>Fishing</strong>
+                <p>Fishing around the hook of New Zealand’s North Island.</p>
+            </div>
+            <div class="item">
+                <strong>Gaming</strong>
+                <p>Gaming with friends and messing around online.</p>
+            </div>
+            <div class="item">
+                <strong>Exercising</strong>
+                <p>Walks, weights, and punching bag sessions.</p>
+            </div>
+            <div class="item">
+                <strong>Exploring NZ</strong>
+                <p>Exploring my country and finding new places.</p>
+            </div>
         </div>
-
-        <div class="item">
-            <strong>Collecting</strong>
-            <p>Band T-shirts and World War II memorabilia, and vinyls.</p>
-        </div>
-
-        <div class="item">
-            <strong>Guitar & Singing</strong>
-            <p>Playing guitar and singing whenever I get the chance.</p>
-        </div>
-
-        <div class="item">
-            <strong>Off-Road Bike Riding</strong>
-            <p>Having a good experience off-road.</p>
-        </div>
-
-        <div class="item">
-            <strong>Fishing</strong>
-            <p>Fishing around the hook of New Zealand’s North Island.</p>
-        </div>
-
-        <div class="item">
-            <strong>Gaming</strong>
-            <p>Gaming with friends and messing around online.</p>
-        </div>
-
-        <div class="item">
-            <strong>Exercising</strong>
-            <p>Walks, weights, and punching bag sessions.</p>
-        </div>
-
-        <div class="item">
-            <strong>Exploring NZ</strong>
-            <p>Exploring my country and finding new places.</p>
-        </div>
-    </div>
-</section>
-
+    </section>
     <section id="albums">
         <h2>Top Three Albums/Mixtapes</h2>
         <div class="grid">
@@ -232,7 +202,7 @@
             </div>
             <div class="item">
                 <img src="ratm.jpg" alt="dihkorn">
-                <strong>2. Rage Agains The Machine - Rage Agains The Machine</strong>
+                <strong>2. Rage Against The Machine - Rage Against The Machine</strong>
             </div>
             <div class="item">
                 <img src="ftl.jpg" alt="kill dih">
@@ -240,7 +210,6 @@
             </div>
         </div>
     </section>
-
     <section id="songs">
         <h2>Top Five Songs</h2>
         <div class="grid">
@@ -266,10 +235,8 @@
             </div>
         </div>
     </section>
-
     <footer>
-        <p>&copy; 2026 Daemon <copy></p>
+        <p>© 2026 Daemon</p>
     </footer>
-
 </body>
 </html>

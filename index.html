@@ -29,19 +29,19 @@
             background: rgba(0, 0, 0, 0.75);
             text-align: center;
             padding: 100px 20px;
-            border-bottom: 3px solid #ff0000;
-            text-shadow: 0 0 10px #ff0000;
+            border-bottom: 3px solid #00ff66;
+            text-shadow: 0 0 10px #00ff66;
         }
         header h1 {
             font-size: 72px;
             margin: 0;
-            color: #ff0000;
-            text-shadow: 0 0 20px #ff0000, 0 0 40px #000000;
+            color: #00ff66;
+            text-shadow: 0 0 20px #00ff66, 0 0 40px #000000;
         }
         header p {
             font-size: 24px;
             color: #ffffff;
-            text-shadow: 0 0 15px rgba(255,0,0,0.6);
+            text-shadow: 0 0 15px rgba(0,255,102,0.6);
         }
         nav {
             background: rgba(0, 0, 0, 0.85);
@@ -61,8 +61,8 @@
             transition: 0.3s;
         }
         nav a:hover {
-            color: #ff0000;
-            text-shadow: 0 0 20px #ff0000;
+            color: #00ff66;
+            text-shadow: 0 0 20px #00ff66;
         }
         section {
             max-width: 900px;
@@ -70,15 +70,15 @@
             padding: 30px;
             background: rgba(0, 0, 0, 0.7);
             border-radius: 15px;
-            box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
-            border: 1px solid #ff0000;
+            box-shadow: 0 0 30px rgba(0, 255, 102, 0.4);
+            border: 1px solid #00ff66;
         }
         h2 {
-            color: #ff0000;
+            color: #00ff66;
             text-align: center;
             font-size: 36px;
-            text-shadow: 0 0 15px #ff0000;
-            border-bottom: 2px dashed #ff0000;
+            text-shadow: 0 0 15px #00ff66;
+            border-bottom: 2px dashed #00ff66;
             padding-bottom: 15px;
         }
         #about p {
@@ -103,22 +103,22 @@
         }
         .item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 0 30px #ff0000;
+            box-shadow: 0 0 30px #00ff66;
         }
         .item img {
             width: 200px;
             height: 200px;
             object-fit: cover;
             border-radius: 10px;
-            border: 3px solid #ff0000;
-            box-shadow: 0 0 20px rgba(255,0,0,0.5);
+            border: 3px solid #00ff66;
+            box-shadow: 0 0 20px rgba(0,255,102,0.5);
         }
         .item strong {
             display: block;
             margin-top: 15px;
             font-size: 20px;
             color: #ffffff;
-            text-shadow: 0 0 10px rgba(255,0,0,0.7);
+            text-shadow: 0 0 10px rgba(0,255,102,0.7);
         }
         footer {
             text-align: center;
@@ -126,16 +126,37 @@
             background: rgba(0, 0, 0, 0.9);
             color: #ffffff;
             margin-top: 60px;
-            border-top: 3px solid #ff0000;
+            border-top: 3px solid #00ff66;
         }
         #header-img {
             width: 300px;
             height: 300px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid #ff0000;
-            box-shadow: 0 0 40px #ff0000, 0 0 60px rgba(255,0,0,0.6);
+            border: 5px solid #00ff66;
+            box-shadow: 0 0 40px #00ff66, 0 0 60px rgba(0,255,102,0.6);
             margin-top: 20px;
+        }
+
+        /* Instrument section styling */
+        .instrument-list {
+            text-align: left;
+            max-width: 700px;
+            margin: 30px auto;
+            font-size: 18px;
+        }
+        .instrument-list h3 {
+            color: #00ff66;
+            margin-top: 30px;
+            text-shadow: 0 0 10px #00ff66;
+        }
+        .instrument-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .instrument-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed rgba(0,255,102,0.3);
         }
     </style>
 </head>
@@ -149,6 +170,7 @@
     <nav>
         <a href="#about">About Me</a>
         <a href="#hobbies">Hobbies</a>
+        <a href="#instruments">Instruments</a>
         <a href="#albums">Top Albums</a>
         <a href="#songs">Top Songs</a>
     </nav>
@@ -193,6 +215,36 @@
             </div>
         </div>
     </section>
+
+    <!-- New Instruments Section -->
+    <section id="instruments">
+        <h2>My Instruments</h2>
+        <div class="instrument-list">
+            <p><strong>Preferred Instruments:</strong> Rhythm Guitar & Acoustic Guitar</p>
+            
+            <h3>Full Songs I Can Play on Guitar</h3>
+            <ul>
+                <li>1. Antichrist Superstar - Marilyn Manson</li>
+                <li>2. The Beautiful People - Marilyn Manson</li>
+            </ul>
+
+            <h3>Riffs I Can Play on Guitar</h3>
+            <ul>
+                <li>1. Bombtrack - Rage Against The Machine (main riff)</li>
+                <li>2. Freedom - Rage Against The Machine (interlude riff)</li>
+                <li>3. The Heretic Anthem - Slipknot (intro riff)</li>
+                <li>4. Whiplash - Metallica (intro riff)</li>
+                <li>5. Master Of Puppets - Metallica (intro riff)</li>
+                <li>6. Nothing Else Matters - Metallica (intro riff)</li>
+            </ul>
+
+            <h3>Songs on Other Instruments</h3>
+            <ul>
+                <li>1. We Will Rock You - Queen (drums)</li>
+            </ul>
+        </div>
+    </section>
+
     <section id="albums">
         <h2>Top Three Albums/Mixtapes</h2>
         <div class="grid">

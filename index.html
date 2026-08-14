@@ -11,8 +11,8 @@
             margin: 0;
             padding: 0;
             font-family: 'Orbitron', sans-serif;
-            background-color: #000000;
-            color: #ffffff;
+            background-color: #0a0a1a;
+            color: #e0e8ff;
             background-image: url('image2.png');
             background-size: cover;
             background-attachment: fixed;
@@ -26,66 +26,71 @@
             to { opacity: 1; }
         }
         header {
-            background: rgba(0, 0, 0, 0.75);
+            background: rgba(5, 10, 30, 0.82);
             text-align: center;
             padding: 100px 20px;
-            border-bottom: 3px solid #00ff66;
-            text-shadow: 0 0 10px #00ff66;
+            border-bottom: 3px solid #7eb8ff;
+            text-shadow: 0 0 12px #4a90ff, 0 0 25px rgba(100, 180, 255, 0.5);
         }
         header h1 {
             font-size: 72px;
             margin: 0;
-            color: #00ff66;
-            text-shadow: 0 0 20px #00ff66, 0 0 40px #000000;
+            color: #c8e0ff;
+            text-shadow: 0 0 20px #6ab0ff, 0 0 40px #1a3a6e, 0 0 60px rgba(100, 180, 255, 0.4);
         }
         header p {
             font-size: 24px;
-            color: #ffffff;
-            text-shadow: 0 0 15px rgba(0,255,102,0.6);
+            color: #d0e0ff;
+            text-shadow: 0 0 15px rgba(120, 180, 255, 0.7);
+        }
+        header h5 {
+            color: #a0c0e0;
+            text-shadow: 0 0 10px rgba(100, 160, 255, 0.5);
         }
         nav {
-            background: rgba(0, 0, 0, 0.85);
+            background: rgba(5, 8, 25, 0.9);
             text-align: center;
             padding: 15px;
             position: sticky;
             top: 0;
             z-index: 10;
-            box-shadow: 0 0 20px #000000;
+            box-shadow: 0 0 25px rgba(0, 40, 100, 0.6);
+            border-bottom: 1px solid rgba(100, 160, 255, 0.3);
         }
         nav a {
-            color: #ffffff;
+            color: #d0e0ff;
             margin: 0 30px;
             text-decoration: none;
             font-size: 20px;
-            text-shadow: 0 0 8px rgba(0,0,0,0.9);
+            text-shadow: 0 0 8px rgba(50, 100, 200, 0.8);
             transition: 0.3s;
         }
         nav a:hover {
-            color: #00ff66;
-            text-shadow: 0 0 20px #00ff66;
+            color: #ffffff;
+            text-shadow: 0 0 20px #7eb8ff, 0 0 35px #4a90ff;
         }
         section {
             max-width: 900px;
             margin: 60px auto;
             padding: 30px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(8, 12, 35, 0.78);
             border-radius: 15px;
-            box-shadow: 0 0 30px rgba(0, 255, 102, 0.4);
-            border: 1px solid #00ff66;
+            box-shadow: 0 0 35px rgba(60, 120, 220, 0.35);
+            border: 1px solid rgba(120, 180, 255, 0.45);
         }
         h2 {
-            color: #00ff66;
+            color: #b8d8ff;
             text-align: center;
             font-size: 36px;
-            text-shadow: 0 0 15px #00ff66;
-            border-bottom: 2px dashed #00ff66;
+            text-shadow: 0 0 18px #5a9fff, 0 0 30px rgba(80, 140, 255, 0.5);
+            border-bottom: 2px dashed rgba(120, 180, 255, 0.6);
             padding-bottom: 15px;
         }
         #about p {
             font-size: 18px;
             line-height: 1.8;
             text-align: center;
-            color: #dddddd;
+            color: #c8d8f0;
         }
         .grid {
             display: grid;
@@ -94,60 +99,66 @@
             margin-top: 40px;
         }
         .item {
-            background: rgba(20, 0, 0, 0.8);
+            background: rgba(10, 15, 40, 0.85);
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 0 15px #000000;
+            box-shadow: 0 0 18px rgba(20, 50, 120, 0.5);
+            border: 1px solid rgba(80, 140, 220, 0.3);
             transition: transform 0.3s, box-shadow 0.3s;
         }
         .item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 0 30px #00ff66;
+            box-shadow: 0 0 35px rgba(100, 180, 255, 0.55);
+            border-color: rgba(140, 200, 255, 0.6);
         }
         .item img {
             width: 200px;
             height: 200px;
             object-fit: cover;
             border-radius: 10px;
-            border: 3px solid #00ff66;
-            box-shadow: 0 0 20px rgba(0,255,102,0.5);
+            border: 3px solid #6ab0ff;
+            box-shadow: 0 0 22px rgba(100, 170, 255, 0.55);
         }
         .item strong {
             display: block;
             margin-top: 15px;
             font-size: 20px;
-            color: #ffffff;
-            text-shadow: 0 0 10px rgba(0,255,102,0.7);
+            color: #e0ecff;
+            text-shadow: 0 0 12px rgba(100, 180, 255, 0.7);
+        }
+        .item p {
+            color: #b0c8e0;
         }
         footer {
             text-align: center;
             padding: 30px;
-            background: rgba(0, 0, 0, 0.9);
-            color: #ffffff;
+            background: rgba(5, 8, 25, 0.95);
+            color: #c0d0e8;
             margin-top: 60px;
-            border-top: 3px solid #00ff66;
+            border-top: 3px solid #6ab0ff;
+            text-shadow: 0 0 10px rgba(80, 140, 220, 0.5);
         }
         #header-img {
             width: 300px;
             height: 300px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid #00ff66;
-            box-shadow: 0 0 40px #00ff66, 0 0 60px rgba(0,255,102,0.6);
+            border: 5px solid #7eb8ff;
+            box-shadow: 0 0 45px #5a9fff, 0 0 70px rgba(80, 150, 255, 0.5);
             margin-top: 20px;
         }
-
         .instrument-list {
             text-align: left;
             max-width: 700px;
             margin: 30px auto;
             font-size: 18px;
+            color: #c8d8f0;
         }
         .instrument-list h3 {
-            color: #00ff66;
+            color: #b0d0ff;
             margin-top: 30px;
-            text-shadow: 0 0 10px #00ff66;
+            text-shadow: 0 0 12px #5a9fff;
         }
         .instrument-list ul {
             list-style-type: none;
@@ -155,7 +166,11 @@
         }
         .instrument-list li {
             padding: 8px 0;
-            border-bottom: 1px dashed rgba(0,255,102,0.3);
+            border-bottom: 1px dashed rgba(100, 160, 255, 0.35);
+            color: #b8cce8;
+        }
+        .instrument-list strong {
+            color: #d0e4ff;
         }
     </style>
 </head>
@@ -214,20 +229,21 @@
             </div>
         </div>
     </section>
-
     <section id="instruments">
         <h2>My Instruments</h2>
         <div class="instrument-list">
             <p><strong>Preferred Instruments:</strong> Rhythm Guitar & Acoustic Guitar</p>
-            
+           
             <h3>Full Songs I Can Play on Guitar</h3>
             <ul>
                 <li>1. Antichrist Superstar - Marilyn Manson</li>
                 <li>2. The Beautiful People - Marilyn Manson</li>
                 <li>3. Bombtrack - Rage Against The Machine (most of song)</li>
                 <li>4. Township Rebellion - Rage Against The Machine (most of song)</li>
+                <li>5. The Love Song - Marilyn Manson</li>
+                <li>6. The Nobodies - Marilyn Manson</li>
             </ul>
-            
+           
             <h3>Riffs I Can Play on Guitar</h3>
             <ul>
                 <li>1. Bombtrack - Rage Against The Machine (main riff)</li>
@@ -242,20 +258,16 @@
                 <li>10. Master Of Puppets - Metallica (intro riff)</li>
                 <li>11. One Step Closer - Linkin Park (bridge riff)</li>
                 <li>12. Nothing Else Matters - Metallica (intro riff)</li>
-                <li>13. The Love Song - Marilyn Manson</li>
-                <li>14. The Nobodies - Marilyn Manson</li>
-                <li>15. Dope Hat - Marilyn Manson (main riff)</li>
-                <li>16. Wrapped In Plastic - Marilyn Manson (main riff)</li>
-                <li>17. Are You The Rabbit? - Marilyn Manson (main riff)</li>
+                <li>13. Dope Hat - Marilyn Manson (main riff)</li>
+                <li>14. Wrapped In Plastic - Marilyn Manson (main riff)</li>
+                <li>15. Are You The Rabbit? - Marilyn Manson (main riff)</li>
             </ul>
-
             <h3>Songs on Other Instruments</h3>
             <ul>
                 <li>1. We Will Rock You - Queen (drums)</li>
             </ul>
         </div>
     </section>
-
     <section id="albums">
         <h2>Top Three Albums/Mixtapes</h2>
         <div class="grid">
